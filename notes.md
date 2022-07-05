@@ -76,6 +76,8 @@ $ dig +short aberdeen/gb.weather @dns.toys
 
 ### `openssl`
 
+When we get to this one we should check out https://smallstep.com/blog/if-openssl-were-a-gui/. Thanks to @phoolish for sharing.
+
 ### `mitmproxy`
 
 ### Miscellaneous Networking Tools
