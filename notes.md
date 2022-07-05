@@ -2,13 +2,14 @@
 
 ## Table of Contents
 
-- [dig](#dig)
+- Networking
+  - [dig](#dig)
 
 ## Networking
 
 ### `dig`
 
-See p4 of Bite-Sized Networking for more info.
+See p4 of [Bite-Sized Networking](./README.md#inspiration) for more info.
 
 The command is a DNS lookup tool. It can be installed using the [`dnsutils`](https://packages.ubuntu.com/jammy/net/dnsutils) library on Ubuntu. This is already added to the accompanying Dockerfile.
 
