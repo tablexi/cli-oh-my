@@ -46,6 +46,20 @@ $ dig +short txidigital.com
 # will show a short version of the output based on the type of record requested
 ```
 
+Hat tip to @phoolish for sharing https://www.dns.toys/ which provides a bunch of fun things you can do with `dig`.
+
+```shell
+$ dig +short aberdeen/gb.time @dns.toys
+"Aberdeen (Europe/London, GB)" "Tue, 05 Jul 2022 19:56:31 +0100"
+
+$ dig +short aberdeen/gb.weather @dns.toys
+"Aberdeen (GB)" "13.20C (55.76F)" "75.60% hu." "cloudy" "20:00, Tue"
+"Aberdeen (GB)" "12.70C (54.86F)" "80.20% hu." "cloudy" "22:00, Tue"
+"Aberdeen (GB)" "12.90C (55.22F)" "79.90% hu." "cloudy" "00:00, Wed"
+"Aberdeen (GB)" "12.40C (54.32F)" "85.60% hu." "rain" "02:00, Wed"
+"Aberdeen (GB)" "12.40C (54.32F)" "91.30% hu." "cloudy" "04:00, Wed"
+```
+
 ### `ping`
 
 ### `curl`
