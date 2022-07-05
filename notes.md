@@ -72,6 +72,17 @@ $ dig +short txidigital.com
 
 ### `ss/netstat`
 
+This is one I use a fair bit because I can never remember what I've left running somewhere! I'll update this section more when I come to it and explore some more, but for now this is how I use it.
+
+```shell
+$ ss -lnt
+State          Recv-Q         Send-Q                  Local Address:Port                    Peer Address:Port         Process         
+LISTEN         0              4096                        127.0.0.1:6443                         0.0.0.0:*                            
+LISTEN         0              511                         127.0.0.1:43651                        0.0.0.0:*
+```
+
+This shows the _port number_ (`-n`) for all _listening_ (`-l`) connections on _TCP_ (`-t`). I use it to find things like web servers, database servers and the like.
+
 ### `iptables`
 
 ### `tc`
