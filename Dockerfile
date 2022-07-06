@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 
 RUN apt update
-RUN apt install -y dnsutils iproute2 # install dig and ss
 
+# dnsutils: dig
+# iproute2: ss
+# iputils-ping: ping
+RUN apt install -y dnsutils iproute2 iputils-ping

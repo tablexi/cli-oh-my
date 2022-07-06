@@ -10,8 +10,8 @@ I've included a docker container that should contain everything that we need.
 # build the image
 docker build -t cli-oh-my .
 
-# run the image
-docker run -it cli-oh-my
+# run the image and automatically delete it (--rm) when you exit
+docker run -it --rm cli-oh-my
 ```
 
 ## Notes

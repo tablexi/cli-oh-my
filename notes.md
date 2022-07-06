@@ -5,6 +5,7 @@
 - Networking
   - [dig](#dig)
   - [ping](#ping)
+  - [traceroute](#traceroute)
   - [curl](#curl)
   - [nmap](#nmap)
   - [netcat](#netcat)
@@ -61,6 +62,38 @@ $ dig +short aberdeen/gb.weather @dns.toys
 ```
 
 ### `ping`
+
+See p5 of [Bite-Sized Networking](./README.md#inspiration) for more info.
+
+`ping` let's you "ping" a server to make sure that you can get a connection to it. You can also check the latency of that connection (i.e. how long it takes to get there and back again).
+
+> ping works by sending an ICMP packet and waiting for a reply
+
+From https://www.cloudflare.com/learning/ddos/glossary/internet-control-message-protocol-icmp/
+
+> The Internet Control Message Protocol (ICMP) is a network layer protocol used by network devices to diagnose network communication issues. ICMP is mainly used to determine whether or not data is reaching its intended destination in a timely manner.
+
+```shell
+$ ping txidigital.com
+PING txidigital.com (69.167.171.6) 56(84) bytes of data.
+64 bytes from 69.167.171.6: icmp_seq=1 ttl=37 time=116 ms
+64 bytes from 69.167.171.6: icmp_seq=2 ttl=37 time=114 ms
+64 bytes from 69.167.171.6: icmp_seq=3 ttl=37 time=117 ms
+... # will keep running until you Ctrl-C
+
+$ ping -c3 txidigital.com
+PING txidigital.com (69.167.171.6) 56(84) bytes of data.
+64 bytes from 69.167.171.6: icmp_seq=1 ttl=37 time=116 ms
+64 bytes from 69.167.171.6: icmp_seq=2 ttl=37 time=114 ms
+64 bytes from 69.167.171.6: icmp_seq=3 ttl=37 time=117 ms
+# with -c<n> it will only run n times
+```
+
+Note that the latency is pretty slow for me `time=116ms`. This could well be because I'm based in the UK.
+
+### `tracert`
+
+See p5 of [Bite-Sized Networking](./README.md#inspiration) for more info.
 
 ### `curl`
 
