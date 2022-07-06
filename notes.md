@@ -89,7 +89,19 @@ PING txidigital.com (69.167.171.6) 56(84) bytes of data.
 # with -c<n> it will only run n times
 ```
 
-Note that the latency is pretty slow for me `time=116ms`. This could well be because I'm based in the UK.
+Note that the latency is pretty slow for me `time=116ms`. This is because I'm based in the UK. We get a better latency running from a US-based server.
+
+```shell
+$ ping -c3 txidigital.com
+PING txidigital.com (69.167.171.6) 56(84) bytes of data.
+64 bytes from 69.167.171.6: icmp_seq=1 ttl=47 time=24.8 ms
+64 bytes from 69.167.171.6: icmp_seq=2 ttl=47 time=24.8 ms
+64 bytes from 69.167.171.6: icmp_seq=3 ttl=47 time=24.7 ms
+
+--- txidigital.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 24.786/24.833/24.896/0.046 ms
+```
 
 ### `tracert`
 
